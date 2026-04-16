@@ -42,7 +42,7 @@
     "email": "sadia.karim@gmail.com",
     "days_since_contact": 2,
     "status": "Over due",
-    "tags": ["Travel"],
+    "tags": ["Hobby","Travel"],
     "bio": "Worked together on multiple university projects. Very creative thinker.",
     "goal": 14,
     "next_due_date": "2025-07-28"
@@ -90,7 +90,7 @@
     "email": "mahiya.tasnim@gmail.com",
     "days_since_contact": 1,
     "status": "Almost due",
-    "tags": ["Travel"],
+    "tags": ["Hobby","Travel"],
     "bio": "Met during internship. Loves traveling and photography.",
     "goal": 7,
     "next_due_date": "2025-07-22"
@@ -127,7 +127,7 @@
     "email": "rafiul.islam@outlook.com",
     "days_since_contact": 3,
     "status": "Over due",
-    "tags": ["Work"],
+    "tags": ["Hobby","Travel"],
     "bio": "Co-founder of a small startup idea. Passionate about AI and business.",
     "goal": 7,
     "next_due_date": "2025-07-26"
@@ -139,7 +139,7 @@
     "email": "mim.akter@gmail.com",
     "days_since_contact": 11,
     "status": "On Track",
-    "tags": ["Hobby"],
+    "tags": ["Work"],
     "bio": "Relative who studies in another city. We chat occasionally.",
     "goal": 14,
     "next_due_date": "2025-07-19"
@@ -151,7 +151,7 @@
     "email": "hasan.riaz@gmail.com",
     "days_since_contact": 22,
     "status": "Over due",
-    "tags": ["Work"],
+    "tags": ["Hobby","Travel"],
     "bio": "Gym buddy who motivates me to stay consistent and healthy.",
     "goal": 10,
     "next_due_date": "2025-07-08"
