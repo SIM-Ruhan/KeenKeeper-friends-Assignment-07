@@ -1,18 +1,26 @@
-# React + Vite
+# KeenKeeper 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ # Description
+ 
+This is a Friend List Management web application built with React that helps users keep track of their personal connections. The app allows users to view, organize, and monitor interactions with friends using dynamic data loaded from JSON. It provides a clean and responsive interface, making it easy to identify overdue contacts, manage relationships, and visualize interaction patterns efficiently.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+##  Technologies Used
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+* React.js
+* Vite
+* Tailwind CSS
+* React Router
+* Recharts
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+##  Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Interactive Data Visualization** – Displays data using responsive charts for better insights
+*  **Dynamic Routing** – Seamless navigation between pages using React Router
+*  **Responsive UI Design** – Clean and mobile-friendly interface built with Tailwind CSS
+
+
