@@ -46,8 +46,7 @@ const TimelinePage = () => {
                     filteredTimeline.map((item) => (
                         <div
                             key={item.id}
-                            className="bg-white shadow p-4 rounded-lg flex items-center gap-4"
-                        >
+                            className="bg-white shadow p-4 rounded-lg flex items-center gap-4">
                             <span className="text-xl">
                                 {getIcon(item.type)}
                             </span>

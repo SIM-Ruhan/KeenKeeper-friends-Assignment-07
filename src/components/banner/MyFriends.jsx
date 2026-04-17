@@ -44,7 +44,7 @@ return(
 </div>
 
         <div className="">
-            <button className='bg-[#EFAD44] text-white px-3 py-1 rounded-full'>{friend.status}</button>
+            <button className={friend.class}>{friend.status}</button>
             </div>
     </div>
 </Link>
