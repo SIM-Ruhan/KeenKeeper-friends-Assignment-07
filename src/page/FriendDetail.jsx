@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { useContext } from "react";
+import { TimelineContext } from "../timeline/TimelineContext";
+
+
+
+
+
 
 const FriendDetails = () => {
     const { id } = useParams();
     const [friend, setFriend] = useState(null);
-
+const { addEvent } = useContext(TimelineContext);
     useEffect(() => {
         fetch("/Friend.json")
             .then(res => res.json())
@@ -19,6 +26,7 @@ const FriendDetails = () => {
              <span className="loading loading-spinner text-error"></span>
         </div>;
     }
+
 
     return (
         <div className="w-[75%] mx-auto mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -94,13 +102,13 @@ const FriendDetails = () => {
                 <div className="p-6 shadow bg-white rounded-lg">
                     <h2 className="text-[#244D3F] text-xl font-medium mb-4">Quick Check-in</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <button className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center">
+                    <button onClick={() => addEvent("call", friend.name)} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center">
                         <i className="fa-solid fa-phone-flip"></i><br /> Call
                     </button>
-                    <button className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center">
+                    <button onClick={() => addEvent("text", friend.name)} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center">
                         <i className="fa-regular fa-comment-dots"></i><br /> Text
                     </button>
-                    <button className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center">
+                    <button onClick={() => addEvent("video", friend.name)} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center">
                         <i className="fa-solid fa-video"></i> <br />Video
                     </button>
                 </div></div>
