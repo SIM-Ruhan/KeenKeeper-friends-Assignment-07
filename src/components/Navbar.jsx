@@ -4,6 +4,7 @@ import { NavLink } from 'react-router';
 const Navbar = () => {
     return (
         <div>
+            
             <div className="navbar bg-base-100 shadow-sm md:px-20">
   <div className="navbar-start">
     <h2 className='text-2xl'><span className='font-bold'>Keen</span>Keeper</h2>

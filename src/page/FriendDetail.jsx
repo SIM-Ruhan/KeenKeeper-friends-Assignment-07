@@ -49,7 +49,7 @@ toast.success(`Video with ${friend.name}`);
                 />
                 <h2 className="text-xl font-semibold">{friend.name}</h2>
 
-                <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm my-2 inline-block">
+                <span className={friend.class}>
                     {friend.status}
                 </span>
 

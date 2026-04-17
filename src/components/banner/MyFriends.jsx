@@ -6,7 +6,7 @@ const MyFriends = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("../public/Friend.json")
+        fetch("../Friend.json")
             .then(res => res.json())
             .then(data => {
                 setFriends(data);

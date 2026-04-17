@@ -12,7 +12,7 @@ const TimelinePage = () => {
         if (type === "call") return "📞";
         if (type === "text") return "💬";
         if (type === "video") return "🎥";
-        return "📌";
+        return "?";
     };
 
     
@@ -31,8 +31,7 @@ const TimelinePage = () => {
                 <select
                     value={filter}
                     onChange={(e) => setFilter(e.target.value)}
-                    className="border border-gray-300 px-3 py-2 rounded-md bg-white"
-                >
+                    className="border border-gray-300 px-3 py-2 rounded-md bg-white">
                     <option value="all">All</option>
                     <option value="call">Calls</option>
                     <option value="text">Texts</option>
