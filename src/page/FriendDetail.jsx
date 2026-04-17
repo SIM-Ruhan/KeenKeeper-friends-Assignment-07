@@ -102,13 +102,13 @@ const { addEvent } = useContext(TimelineContext);
                 <div className="p-6 shadow bg-white rounded-lg">
                     <h2 className="text-[#244D3F] text-xl font-medium mb-4">Quick Check-in</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <button onClick={() => addEvent("call", friend.name)} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center">
+                    <button onClick={() => addEvent("call", friend.name)} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center cursor-pointer hover:scale-105 transition">
                         <i className="fa-solid fa-phone-flip"></i><br /> Call
                     </button>
-                    <button onClick={() => addEvent("text", friend.name)} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center">
+                    <button onClick={() => addEvent("text", friend.name)} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center cursor-pointer hover:scale-105 transition">
                         <i className="fa-regular fa-comment-dots"></i><br /> Text
                     </button>
-                    <button onClick={() => addEvent("video", friend.name)} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center">
+                    <button onClick={() => addEvent("video", friend.name)} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center cursor-pointer hover:scale-105 transition">
                         <i className="fa-solid fa-video"></i> <br />Video
                     </button>
                 </div></div>

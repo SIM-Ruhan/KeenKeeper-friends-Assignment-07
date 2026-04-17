@@ -1,5 +1,7 @@
 import { useContext, useState } from "react";
 import { TimelineContext } from "../timeline/TimelineContext";
+import { Link } from "react-router";
+
 
 const TimelinePage = () => {
     const { timeline } = useContext(TimelineContext);
@@ -51,8 +53,8 @@ const TimelinePage = () => {
                             </span>
 
                             <div>
-                                <p className="font-semibold capitalize">
-                                    {item.type} with {item.name}
+                                <p className="font-semibold">
+                                    <span className="text-xl">{item.type}</span> <span className="text-[#64748B]">with {item.name}</span> 
                                 </p>
                                 <p className="text-sm text-gray-500">
                                     {item.date}
@@ -61,9 +63,11 @@ const TimelinePage = () => {
                         </div>
                     ))
                 ) : (
-                    <p className="text-gray-500 text-center">
-                        No records found.
-                    </p>
+                    <div className='flex flex-col items-center gap-6 mt-20'>
+            <h1 className="text-gray-500 text-xl">No Data Found</h1>
+            
+            <Link to={'/'}><button className='btn btn-outline btn-success'>Go Back Home</button></Link>
+        </div>
                 )}
             </div>
         </div>
