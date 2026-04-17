@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useContext } from "react";
 import { TimelineContext } from "../timeline/TimelineContext";
+import NotFound from "../components/notfound/NotFound";
+import { toast } from "react-toastify";
 
 
 
@@ -11,6 +13,8 @@ import { TimelineContext } from "../timeline/TimelineContext";
 const FriendDetails = () => {
     const { id } = useParams();
     const [friend, setFriend] = useState(null);
+
+   
 const { addEvent } = useContext(TimelineContext);
     useEffect(() => {
         fetch("/Friend.json")
@@ -22,11 +26,19 @@ const { addEvent } = useContext(TimelineContext);
     }, [id]);
 
     if (!friend) {
-        return <div className="text-center mt-20">
-             <span className="loading loading-spinner text-error"></span>
-        </div>;
+        return (
+            <NotFound/>
+        )
     }
-
+ const toastingCall = () => {
+toast.success(`Call with ${friend.name}`);
+    }
+    const toastingText = () => {
+toast.success(`Text with ${friend.name}`);
+    }
+    const toastingVideo = () => {
+toast.success(`Video with ${friend.name}`);
+    }
 
     return (
         <div className="w-[75%] mx-auto mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -102,13 +114,13 @@ const { addEvent } = useContext(TimelineContext);
                 <div className="p-6 shadow bg-white rounded-lg">
                     <h2 className="text-[#244D3F] text-xl font-medium mb-4">Quick Check-in</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <button onClick={() => addEvent("call", friend.name)} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center cursor-pointer hover:scale-105 transition">
+                    <button onClick={() => {addEvent("call", friend.name);toastingCall()}} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center cursor-pointer hover:scale-105 transition">
                         <i className="fa-solid fa-phone-flip"></i><br /> Call
                     </button>
-                    <button onClick={() => addEvent("text", friend.name)} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center cursor-pointer hover:scale-105 transition">
+                    <button onClick={() => {addEvent("text", friend.name);toastingText()}} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center cursor-pointer hover:scale-105 transition">
                         <i className="fa-regular fa-comment-dots"></i><br /> Text
                     </button>
-                    <button onClick={() => addEvent("video", friend.name)} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center cursor-pointer hover:scale-105 transition">
+                    <button onClick={() => {addEvent("video", friend.name);toastingVideo()}} className="bg-[#F8FAFC] border border-[#E9E9E9] rounded-xl p-6 text-center cursor-pointer hover:scale-105 transition">
                         <i className="fa-solid fa-video"></i> <br />Video
                     </button>
                 </div></div>
