@@ -14,6 +14,8 @@ const Status = () => {
         { name: "Videos", value: videoCount, fill: "#16BB66"}
     ];
     return (
+        <div>
+            <h1 className='text-3xl md:text-5xl font-bold mt-12 mb-4 container mx-auto'>Friendship Analytics</h1>
         <div className='my-10 shadow p-10 rounded-md container mx-auto'>
             <h1 className="text-xl text-[#244D3F] font-medium">By Interaction Type</h1>
           <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh',margin: "auto", aspectRatio: 1 }} responsive>
@@ -31,7 +33,7 @@ const Status = () => {
      <Tooltip/>
     </PieChart>
         </div>
-    );
+   </div> );
 };
 
 export default Status;
